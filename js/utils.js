@@ -4,7 +4,7 @@ const getRandomInt = (value) => Math.random() < (value/100);
 
 const showInfo = function() {
 
-  const message = `HP у ${this.name} ${this.hp}`;
+  const message = `HP у ${this.name} == ${this.hp}`;
   console.log(message);
   console.log('============================');
   
@@ -43,4 +43,21 @@ const attack = function() {
     console.log(message);
 
   }
+}
+
+
+const attackDragon = function() {
+
+  if(getRandomInt(50)){
+
+    this.modifyHealthDragon();
+    Hero.showInfo();
+
+  }else{
+
+    const messageDragon = `Дракон не стал атаковать героя =(\n=======================`;
+    console.log(messageDragon);
+
+  }
+
 }
